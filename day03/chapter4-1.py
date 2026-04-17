@@ -86,3 +86,27 @@ print(190 not in list_a) # True -> False
 # 리스트와 반복문 
 # for 반복변수 in 반복할수 있는 자료 
 # 코드 
+
+array = [273,32,103,57,52]
+for element in array : 
+    print(element)
+
+# 중첩리스트 # 중첩반복문 #2차원리스트 
+list_of_list = [
+    [1,2,3],
+    [4,5,6,7],
+    [8,9]
+]
+
+for row in list_of_list:
+    print(row)
+    for col in row:
+        print(col)
+        
+# 전개 연산자 , * 
+list_a =[1,2,3]
+print(list_a) #[1,2,3] # 리스트 그자체 
+print(*list_a) # 리스트 그자체가 아닌 , 1 2 3
+
+print([list_a , list_a])   # 2차원 리스트 구성 
+print([*list_a , *list_a]) # 1차원 리스트
