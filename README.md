@@ -1,3 +1,4 @@
+```
 [ 문법정리 ]
 1. 타입 : string, number , boolean
 2. 문자열 표현 : " " , ' ' , """ """
@@ -12,463 +13,180 @@
 11. 입력 : input( )
 12. 타입변환 : int( ) , float( ) , str( )
 
-# Python 치트시트 — 개발 참고용
 
----
+13. 문자열 포멧 : 
+	"문자열{}문자열".format( 표현식 )
+	 f"문자열{ 표현식 } 문자열"
+14. 문자열 함수 : 
+	.upper() , .lower() , .strip() , 
+	.find() , 찾을문자 in 문자열 , .split()
+15. 비교연산자 : == != > < >= <=
+16. 논리연산자 : not and or 
+17. 조건문 : 
+	(1)
+	if 조건식 :
+		실행문 
+	(2)
+	if 조건식 : 
+		실행문 
+	else : 
+		실행문 
+	(3)
+	if 조건식 : 
+		실행문 
+	elif 조건식 : 
+		실행문 
+	elif 조건식 :
+		실행문
+	else : 
+		실행문
+18. 리스트 : [  값,  값,  값 ]
+	.append( )
+	.insert( )
+	del [리스트][인덱스]
+	.pop( )
+	.clear( )
+	.sort( )  , .sort( reverse = true )
+	찾을값 in [리스트]
+	len( [리스트] )
+	revered( [리스트] )
+	enumerate( [리스트] ) 
+	*[리스트]
+19. 딕셔너리 : { "키" : 값 , "키" : 값 }
+	딕셔너리[새로운키] = 새로운값 
+	del 딕셔너리[키]
+	찾을키 in {딕셔너리}
+	.get( 키 )
+	.items( )
+20. 튜플 : 
+	( 값, 값 , 값 )
+	괄호 생략 가능
+	수정 불가능
+21. 반복문 
+	for element in [리스트] :
+	for key in {딕셔너리 } :
+	for i in range( 시작값 , 끝값+1 , 증감 ) : 	
+	while 조건식 : 
+	break , continue
+	[ 표현식 for 반복변수 in 반복할것 if 조건식 ]
+22. 여러줄 문자열 : 
+	""" """
+	.format()
+	\n
+	( 문자열 문자열 )
+23. 문자열 합치기 : "연결문자열".join( [리스트] ) 
+24. 함수 
+	def 함수명( 매개변수, 매개변수 ) :
+		실행문
+		return 반환값 
+25. 
+	가변매개변수 : *매개변수  , 
+	기본매개변수 : 매개변수 = 기본값
+26. 재귀함수 : 함수 안에서 자신의 함수 호출  
 
-## 변수 & 타입
+ 
 
-```python
-x = 10                          # int
-y = 3.14                        # float
-s = "hello"                     # str
-b = True                        # bool
-n = None                        # 없음
 
-a, b = 1, 2                    # 동시 할당
-a, b = b, a                    # swap
 
-int("123")                      # str → int
-str(123)                        # int → str
-float("3.14")                   # str → float
-type(x)                         # 타입 확인
-isinstance(x, int)              # 타입 체크
 ```
-
-## 문자열
-
-```python
-s = "Hello, World!"
-
-s[0]            # 'H'
-s[-1]           # '!'
-s[0:5]          # 'Hello'
-s[::-1]         # 뒤집기
-
-s.upper()       # 대문자
-s.lower()       # 소문자
-s.strip()       # 양쪽 공백 제거
-s.split(",")    # ['Hello', ' World!']
-",".join(lst)   # 리스트 → 문자열
-s.replace("a", "b")
-s.find("World")        # 9 (없으면 -1)
-s.startswith("He")     # True
-s.count("l")           # 3
-
-# f-string
-f"이름: {name}, 점수: {score:.2f}"
-f"{value:>10}"          # 오른쪽 정렬
-f"{num:,}"              # 1,000,000
-f"{x = }"               # 디버깅용 (3.8+)
 ```
-
-## 리스트
-
-```python
-lst = [1, 2, 3]
-
-lst[0]                  # 인덱싱
-lst[1:3]                # 슬라이싱
-lst[-1]                 # 마지막 요소
-
-lst.append(4)           # 끝에 추가
-lst.insert(0, 99)       # 위치에 삽입
-lst.extend([5, 6])      # 리스트 합치기
-lst.pop()               # 마지막 제거 후 반환
-lst.pop(0)              # 인덱스 제거 후 반환
-lst.remove(3)           # 값으로 제거
-del lst[0]              # 인덱스로 삭제
-
-lst.sort()              # 정렬 (원본 변경)
-lst.sort(reverse=True)  # 내림차순
-sorted(lst)             # 정렬 (새 리스트)
-lst.reverse()           # 뒤집기
-lst.index(2)            # 값의 위치
-lst.count(1)            # 값의 개수
-len(lst)                # 길이
-
-# 언패킹
-a, b, c = [1, 2, 3]
-first, *rest = [1, 2, 3, 4]    # first=1, rest=[2,3,4]
-
-# 깊은 복사
-import copy
-deep = copy.deepcopy(lst)
+# [ Python practice1 ]
+# [ 단 ] if(제어문), for(반복문)은 사용하지 않습니다.
+# [ 제출방법 ] 코드가 작성된 파일이 위치한 깃허브 상세 주소를 제출하시오.
+# 문제 1: 원의 넓이 계산 반지름을 input()으로 입력받아 원의 넓이를 계산하여 출력하시오. (원주율은 3.14로 계산)
+# 문제 2: 평균 점수 계산기 국어, 영어, 수학 세 과목의 점수를 각각 입력받아 총점과 평균을 구하여 출력하시오.
+# 문제 3: 나머지 연산 활용 정수 하나를 입력받아 그 수가 짝수이면 0, 홀수이면 1이 출력되도록 작성하시오.
+# 문제 4: 거듭제곱 계산 숫자 하나를 입력받아 해당 숫자의 제곱과 세제곱 값을 각각 출력하시오.
+# 문제 5: 복합 대입 연산자 실습 변수 balance에 5000을 저장한 후, 복합 대입 연산자만을 사용하여 2000을 더하고, 다시 1500을 뺀 최종 값을 출력하시오.
+# 문제 6: 문자열 길이 출력 사용자의 영문 이름을 입력받아 "당신의 이름은 [숫자]글자입니다."라고 출력하시오.
+# 문제 7: 성과 이름 분리 "홍 길동"과 같이 공백이 포함된 이름을 입력받아, 인덱싱과 슬라이싱을 사용하여 성(첫 글자)만 출력하시오.
+# 문제 8: 문자열 "Python"이 저장된 변수에서 콜론 하나(:)를 사용하는 슬라이싱을 통해 "Pyth"까지만 추출하여 출력하시오.
+# 문제 9: 문자열 곱셈 연산 사용자로부터 문자열 하나와 숫자 하나를 입력받아, 해당 문자열을 숫자만큼 반복하여 출력하시오.
+# 문제 10: 정수형 변환 실수 3.9를 변수에 저장하고, 이를 정수형으로 변환하여 출력했을 때 소수점이 사라지는 것을 확인하시오.
+# 문제 11: 두 수의 문자열 결합 두 개의 숫자를 입력받되, 계산이 아닌 문자열로 결합하여 출력하시오. (예: 10과 20 입력 시 1020 출력)
+# 문제 12: 자동 형변환 확인 정수 10을 실수 2.0으로 나눈 결과를 출력하고, 해당 결과의 데이터 타입이 무엇인지 출력하시오.
+# 문제 13: 초를 분/초로 환산 전체 초(second)를 입력받아 몇 분 몇 초인지 계산하여 출력하시오. (예: 70초 -> 1분 10초)
 ```
-
-## 튜플
-
-```python
-t = (1, 2, 3)
-t = 1, 2, 3            # 괄호 생략 가능
-single = (1,)           # 요소 1개면 콤마 필수
-x, y, z = t             # 언패킹
-# 불변! 수정 불가
 ```
+# [ Python practice2 ]
+# [ 단 ]  for(반복문)은 사용하지 않습니다.
+# [ 제출방법 ] 코드가 작성된 파일이 위치한 깃허브 상세 주소를 제출하시오.
 
-## 딕셔너리
+# 문제 1: 대소문자 변환
+# 사용자로부터 영문 문장을 입력받아 전체를 대문자로 변환한 결과와 소문자로 변환한 결과를 각각 출력하시오.
 
-```python
-d = {"name": "홍길동", "age": 25}
+# 문제 2: 공백 제거 및 문자 교체
+# 사용자로부터 "  Python Programming  "과 같이 공백이 포함된 문자열을 입력받아 양쪽 공백을 제거하고, 공백 부분을 언더바(_)로 교체하여 출력하시오.
 
-d["name"]                   # 접근 (없으면 KeyError)
-d.get("name")               # 접근 (없으면 None)
-d.get("phone", "없음")      # 기본값 지정
-d["email"] = "a@b.com"      # 추가/수정
-d.update({"age": 26})       # 여러 개 수정
+# 문제 3: 문자열 찾기 (인덱스)
+# 문자열 "Hello, Python World!"에서 "Python"이라는 단어가 시작되는 위치(인덱스)를 찾아 출력하시오.
 
-d.keys()                    # 키 목록
-d.values()                  # 값 목록
-d.items()                   # (키, 값) 쌍
+# 문제 4: 두 점수의 합격 판별
+# 두 개의 점수를 입력받아 총점이 120점 이상이고 각 점수가 모두 50점 이상이면 "합격", 아니면 "불합격"을 출력하시오.
 
-d.pop("age")                # 키 삭제 후 값 반환
-del d["name"]               # 삭제
-"name" in d                 # 키 존재 확인
+# 문제 5: 아이디 및 비밀번호 검증
+# 저장된 db_id = "user01", db_pw = "pass12"와 사용자가 입력한 정보가 모두 일치하면 "성공", 하나라도 다르면 "실패"를 출력하시오.
 
-d.setdefault("city", "서울")  # 없으면 추가, 있으면 기존값
+# 문제 6: 비밀번호 보안 등급
+# 비밀번호를 입력받아 길이가 10자 이상이면 "강함", 5자 이상 10자 미만이면 "보통", 5자 미만이면 "약함"을 출력하시오.
 
-# 순회
-for k, v in d.items():
-    print(k, v)
+# 문제 7: 성별 판별
+# 주민등록번호 뒷자리 첫 번째 숫자를 입력받아 1 또는 3이면 "남자", 2 또는 4이면 "여자"를 출력하시오. (힌트: in 연산자 활용)
 
-# 병합 (3.9+)
-merged = d1 | d2
+# 문제 8: 입장료 계산
+# 나이를 입력받아 65세 이상이거나 7세 이하이면 "무료", 그 외에는 "10,000원"을 출력하시오.
+
+# 문제 9: 문자열 포함 여부
+# 사용자가 입력한 문장에 "금지어"라는 단어가 포함되어 있으면 "차단된 문장입니다", 없으면 "정상 문장입니다"를 출력하시오.
+
+# 문제 10: 성적 등급 산출
+# 점수를 입력받아 90점 이상은 "A", 80점 이상은 "B", 70점 이상은 "C", 그 미만은 "F"를 출력하시오.
+
+# 문제 11: 할인 적용 결제 금액
+# 구매 금액을 입력받아 10만원 이상이면 20% 할인, 5만원 이상이면 10% 할인, 그 미만은 할인이 없는 최종 결제 금액을 출력하시오.
+
+# 문제 12: 가위바위보 결과
+# 플레이어1과 플레이어2가 각각 낸 가위(0), 바위(1), 보(2) 숫자를 입력받아 플레이어1 기준으로 "승리", "패배", "무승부" 중 하나를 출력하시오.
+
+# 문제 13: 닉네임 설정
+# 닉네임을 입력받아 이름이 "관리자"와 일치하면 "[관리자]님 환영합니다", 아니면 "[닉네임]님 안녕하세요"를 출력하시오. (힌트: .format() 활용)
 ```
-
-## 세트
-
-```python
-s = {1, 2, 3}
-s = set([1, 1, 2, 2, 3])   # {1, 2, 3} 중복 제거
-
-s.add(4)
-s.remove(1)         # 없으면 KeyError
-s.discard(999)      # 없어도 OK
-
-s1 & s2              # 교집합
-s1 | s2              # 합집합
-s1 - s2              # 차집합
-
-# 중복 제거 활용
-unique = list(set(my_list))
 ```
+# [ Python practice3 ]
+# [ 제출방법 ] 코드가 작성된 파일이 위치한 깃허브 상세 주소를 제출하시오.
 
-## 조건문
+# 문제 1: 인덱싱과 슬라이싱 리스트 list_data = [10, 20, 30, [40, 50, 60], 70]가 있습니다. 슬라이싱과 인덱싱을 사용하여 다음 결과가 나오도록 코드를 작성하시오.
+# 출력 결과 1: [20, 30] (슬라이싱 이용)
+# 출력 결과 2: 60 (중첩 리스트 인덱싱 이용)
 
-```python
-if x > 0:
-    print("양수")
-elif x == 0:
-    print("영")
-else:
-    print("음수")
+# 문제 2: 리스트 요소 변경 및 역순 출력 리스트 colors = ["red", "green", "blue"]가 있습니다. "green"을 "yellow"로 변경하고,  리스트의 요소를 역순(['blue', 'yellow', 'red'])으로 출력하시오.
 
-# 삼항
-result = "짝수" if x % 2 == 0 else "홀수"
+# 문제 3: 요소 추가 및 삽입 빈 리스트 my_list = []를 생성한 후, .append()를 사용하여 숫자 10, 30을 순서대로 추가하고, .insert()를 사용하여 10과 30 사이에 숫자 20을 삽입하여 [10, 20, 30]을 만드시오.
 
-# match-case (3.10+)
-match command:
-    case "start":
-        pass
-    case "stop" | "quit":
-        pass
-    case _:
-        pass
-```
+# 문제 4: 요소 제거 실습 리스트 nums = [0, 1, 2, 3, 4, 5]에서 다음 지시대로 요소를 제거하고 최종 리스트를 출력하시오.
+# del을 사용하여 인덱스 0번 요소 삭제
+# .pop()을 사용하여 마지막 요소 삭제
+# .remove()를 사용하여 값 3 삭제
 
-## 반복문
+# 문제 5: 리스트 정렬과 포함 여부 score = [85, 95, 70, 100] 리스트를 내림차순(큰 숫자부터)으로 정렬하고, 사용자로부터 숫자를 입력받아 해당 숫자가 score 리스트 안에 있는지 in 연산자를 사용하여 True/False로 출력하시오.
 
-```python
-# for
-for x in [1, 2, 3]:
-    print(x)
+# 문제 6: 딕셔너리 기본 선언 및 호출 다음 정보를 담은 딕셔너리 movie를 선언하고, .get() 메서드를 사용하여 영화의 "감독"을 출력하시오.
+# 제목: 파묘
+# 감독: 장재현
+# 개봉: 2024
 
-for i in range(5):           # 0~4
-for i in range(1, 6):        # 1~5
-for i in range(0, 10, 2):    # 0,2,4,6,8
+# 문제 7: 딕셔너리 값 수정 및 삭제 위 6번에서 만든 movie 딕셔너리에 "장르": "미스터리"를 추가하고, "개봉" 키와 값을 삭제한 후 전체 딕셔너리를 출력하시오.
 
-# enumerate — 인덱스 + 값
-for i, val in enumerate(lst):
-    print(i, val)
+# 문제 8: 반복문을 이용한 딕셔너리 출력 딕셔너리 fruit_stock = {"apple": 10, "banana": 5, "cherry": 15}가 있습니다. for 반복문을 사용하여 다음과 같은 형식으로 출력하시오.
+# 출력 형식: apple의 재고는 10개입니다. (모든 요소 반복)
 
-for i, val in enumerate(lst, start=1):
-    print(i, val)
+# 문제 9: 리스트 내 딕셔너리 순회 아래와 같은 리스트가 있을 때, 반복문을 사용하여 각 학생의 이름과 점수를 출력하시오.
+# Python
+# students = [
+#     {"name": "윤동주", "score": 90},
+#     {"name": "백석", "score": 85}
+# ]
+# # 출력 예시: 윤동주 학생의 점수는 90점입니다.
 
-# zip — 여러 리스트 동시 순회
-for a, b in zip(list1, list2):
-    print(a, b)
-
-# while
-while 조건:
-    pass
-
-# break / continue
-for x in range(10):
-    if x == 3: continue   # 건너뛰기
-    if x == 7: break      # 탈출
-
-# for-else (break 안 걸리면 else 실행)
-for x in lst:
-    if x == target: break
-else:
-    print("못 찾음")
-```
-
-## 컴프리헨션
-
-```python
-# 리스트
-[x**2 for x in range(10)]
-[x for x in lst if x > 0]
-["짝" if x%2==0 else "홀" for x in range(5)]
-
-# 딕셔너리
-{k: v for k, v in items}
-{x: x**2 for x in range(5)}
-
-# 세트
-{len(w) for w in words}
-
-# 제너레이터 (메모리 절약)
-gen = (x**2 for x in range(1000000))
-```
-
-## 함수
-
-```python
-def add(a, b):
-    return a + b
-
-# 기본값
-def greet(name, msg="안녕"):
-    return f"{msg}, {name}"
-
-# *args, **kwargs
-def func(*args, **kwargs):
-    print(args)      # 튜플
-    print(kwargs)    # 딕셔너리
-
-# 여러 값 반환
-def get_both():
-    return min_val, max_val
-
-a, b = get_both()
-
-# 람다
-square = lambda x: x**2
-add = lambda a, b: a + b
-```
-
-## map / filter / sorted
-
-```python
-list(map(int, ["1","2","3"]))           # [1, 2, 3]
-list(map(lambda x: x*2, [1,2,3]))      # [2, 4, 6]
-list(filter(lambda x: x>0, [-1,0,1]))  # [1]
-
-sorted(lst, key=lambda x: x["age"])
-sorted(lst, key=len, reverse=True)
-
-# 여러 기준 정렬
-sorted(data, key=lambda x: (x[0], -x[1]))
-```
-
-## 클래스
-
-```python
-class Dog:
-    species = "개"              # 클래스 변수
-
-    def __init__(self, name):
-        self.name = name        # 인스턴스 변수
-
-    def bark(self):
-        return f"{self.name} 멍!"
-
-    def __str__(self):          # print() 시 호출
-        return f"Dog({self.name})"
-
-# 상속
-class Puppy(Dog):
-    def __init__(self, name, toy):
-        super().__init__(name)
-        self.toy = toy
-
-# property
-class User:
-    def __init__(self, age):
-        self._age = age
-
-    @property
-    def age(self):
-        return self._age
-
-    @age.setter
-    def age(self, val):
-        if val < 0: raise ValueError
-        self._age = val
-
-# dataclass (3.7+)
-from dataclasses import dataclass
-
-@dataclass
-class Point:
-    x: float
-    y: float
-```
-
-## 예외처리
-
-```python
-try:
-    result = 10 / 0
-except ZeroDivisionError as e:
-    print(f"에러: {e}")
-except (ValueError, TypeError):
-    print("값/타입 에러")
-except Exception as e:
-    print(f"기타: {e}")
-else:
-    print("에러 없음")
-finally:
-    print("항상 실행")
-
-# 예외 발생
-raise ValueError("잘못된 값")
-```
-
-## 파일
-
-```python
-# 읽기
-with open("file.txt", "r", encoding="utf-8") as f:
-    content = f.read()          # 전체
-    lines = f.readlines()       # 줄 단위 리스트
-    for line in f:              # 한 줄씩 (메모리 효율)
-        print(line.strip())
-
-# 쓰기
-with open("file.txt", "w", encoding="utf-8") as f:
-    f.write("내용\n")
-
-# JSON
-import json
-json.dump(data, f, ensure_ascii=False, indent=2)   # 파일에 쓰기
-data = json.load(f)                                  # 파일에서 읽기
-json.dumps(data)                                     # dict → str
-json.loads(json_str)                                 # str → dict
-```
-
-## 자주 쓰는 내장함수
-
-```python
-len(x)              # 길이
-abs(-5)             # 절대값
-max(1,2,3)          # 최대
-min(1,2,3)          # 최소
-sum([1,2,3])        # 합
-round(3.14, 1)      # 반올림
-any([F, T, F])      # 하나라도 True?
-all([T, T, F])      # 전부 True?
-zip(a, b)           # 묶기
-enumerate(lst)      # 인덱스+값
-map(func, lst)      # 각 요소에 적용
-filter(func, lst)   # 조건 필터
-sorted(lst)         # 정렬
-reversed(lst)       # 뒤집기
-isinstance(x, int)  # 타입 체크
-dir(obj)            # 메서드 목록
-```
-
-## collections
-
-```python
-from collections import Counter, defaultdict, deque
-
-Counter("aabbcc")               # {'a':2, 'b':2, 'c':2}
-Counter(lst).most_common(3)     # 상위 3개
-
-dd = defaultdict(list)
-dd["key"].append("val")         # 키 없어도 자동 생성
-
-dq = deque([1,2,3])
-dq.appendleft(0)                # 왼쪽 추가
-dq.popleft()                    # 왼쪽 제거
-```
-
-## 이터레이터 / 제너레이터
-
-```python
-# 이터레이터 프로토콜
-class Counter:
-    def __init__(self, end):
-        self.current = 0
-        self.end = end
-    def __iter__(self):
-        return self
-    def __next__(self):
-        if self.current >= self.end:
-            raise StopIteration
-        self.current += 1
-        return self.current - 1
-
-# 제너레이터 (간편한 이터레이터)
-def count_up(n):
-    i = 0
-    while i < n:
-        yield i
-        i += 1
-
-gen = count_up(5)
-next(gen)           # 0
-next(gen)           # 1
-list(count_up(5))   # [0, 1, 2, 3, 4]
-```
-
-## 데코레이터
-
-```python
-from functools import wraps
-
-def my_deco(func):
-    @wraps(func)
-    def wrapper(*args, **kwargs):
-        print("before")
-        result = func(*args, **kwargs)
-        print("after")
-        return result
-    return wrapper
-
-@my_deco
-def hello():
-    print("hello!")
-```
-
-## 타입 힌트
-
-```python
-def greet(name: str) -> str:
-    return f"안녕, {name}"
-
-def process(items: list[int]) -> dict[str, int]:
-    pass
-
-# Optional (None 가능)
-from typing import Optional
-def find(id: int) -> Optional[str]:
-    return None
-```
-
-## 정규표현식
-
-```python
-import re
-
-re.search(r"\d+", text)        # 첫 번째 매칭
-re.findall(r"\d+", text)       # 모든 매칭 리스트
-re.sub(r"\d", "*", text)       # 치환
-re.split(r"[,;]", text)        # 분리
-
-# \d 숫자  \w 워드  \s 공백  . 아무거나
-# + 1회이상  * 0회이상  ? 0or1  {n} n회
+# 문제 10: 전개 연산자(*) 활용 list_x = [1, 2, 3]와 list_y = [4, 5]가 있습니다. 전개 연산자를 사용하여 두 리스트의 요소를 하나로 합친 1차원 리스트 [1, 2, 3, 4, 5]를 만들고 출력하시오.
 ```
