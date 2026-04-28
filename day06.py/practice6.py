@@ -12,7 +12,7 @@ print(my_tuple[-2])
 # 튜플 t1 = (1, 2, 3)의 첫 번째 요소를 10으로 변경하려고 할 때 발생하는 에러 메시지의 종류가 무엇인지 주석으로 적고,
 # 왜 변경이 불가능한지 이유를 간략히 서술하시오.
 t1 = (1, 2, 3)
-t1[0]=10 # 'tuple' object does not support item assignment
+# t1[0]=10 # 'tuple' object does not support item assignment
 # 튜플은 수정이 불가하다 
 
 # 문제 3: 괄호가 생략된 튜플과 데이터 스왑
