@@ -69,21 +69,35 @@ y = x[1:4]
 y[0] = 99
 print(y)
 print(x)
+# 리스트와 다르게 복사 하는 것이 아닌 원본 배열을 참조 
 
 # 문제 8: 요소별 사칙연산 (Element-wise Operations)
 # 두 배열 x = np.array([1, 2, 3]), y = np.array([4, 5, 6])의 
 # 더하기(+), 빼기(-), 곱하기(*), 나누기(/) 결과를 각각 출력하시오.
 
-
+x = np.array([1, 2, 3])
+y = np.array([4, 5, 6])
+print(x+y)
+print(x-y)
 
 # 문제 9: 브로드캐스팅 및 수학 함수
 # 1. x = np.array([1, 2, 3])의 모든 요소에 각각 2를 더한 결과와 3을 곱한 결과를 출력하시오.
 # 2. x = np.array([1, 4, 9])의 모든 요소에 대해 제곱근(sqrt)을 구하여 출력하시오.
 
-
+x = np.array([1, 2, 3])
+print(x+2)
+x = np.array([1, 4, 9])
+print(x**2)
 
 # 문제 10: 논리 및 비교 연산 (Logic & Comparison)
 # 1. x = np.array([True, False, True]), y = np.array([False, False, True])에 대해 
 #    AND 연산과 OR 연산 결과를 출력하시오. (np.logical_and/or 사용)
 # 2. 두 배열의 모든 요소가 완전히 같은지 확인하는 함수(np.array_equal)를 사용하여 
 #    [1, 2, 3]과 [1, 2, 4]를 비교한 결과를 출력하시오.
+
+x = np.array([True, False, True])
+y = np.array([False, False, True])
+
+print(np.logical_and(x,y))
+print(np.logical_or(x,y))
+print(np.array_equal(x,y))
